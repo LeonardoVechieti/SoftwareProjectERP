@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contrato" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60383113-7a72-420e-bbd3-7e952e91a444">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="ID" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select  c.id,DATE_FORMAT (c.datageracao,'%d/%m/%Y') as datag, d.destino, d.cliente, c.notacarga, e.nome as transportadora, e.fone, c.lacres, v.placa, v.placaCarreta, v.placaCarreta2, v.placaCarreta3, v.uf, p.cnh, p.cat,  p.nome as motorista, e.nome, c.item1, c.item2, c.item3, c.item4, c.item5, c.item6, c.item7, c.item8, c.item9, c.item10, c.obs1, c.obs2, c.obs3, c.obs4, c.obs5, c.obs6, c.obs7, c.obs8, c.obs9, c.obs10, c.carga1, c.carga2, c.carga3, c.nota1, c.nota2, c.nota3, c.regimelimpeza1, c.regimelimpeza2, c.regimelimpeza3 from checklist c
+join destinos d
+on c.iddestino = d.id
+join pessoas p
+on c.idpes = p.idpes
+join empresas e
+on c.idemp= e.idemp
+join veiculos v 
+on c.idvei= v.idvei
+where c.id=  $P{ID} ]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datag" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="datag"/>
+		<property name="com.jaspersoft.studio.field.label" value="datag"/>
+	</field>
+	<field name="destino" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="destino"/>
+		<property name="com.jaspersoft.studio.field.label" value="destino"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="destinos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="cliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="destinos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="notacarga" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="notacarga"/>
+		<property name="com.jaspersoft.studio.field.label" value="notacarga"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transportadora" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="transportadora"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empresas"/>
+	</field>
+	<field name="fone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fone"/>
+		<property name="com.jaspersoft.studio.field.label" value="fone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empresas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lacres" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lacres"/>
+		<property name="com.jaspersoft.studio.field.label" value="lacres"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="placa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="placa"/>
+		<property name="com.jaspersoft.studio.field.label" value="placa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="placaCarreta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="placaCarreta"/>
+		<property name="com.jaspersoft.studio.field.label" value="placaCarreta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="placaCarreta2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="placaCarreta2"/>
+		<property name="com.jaspersoft.studio.field.label" value="placaCarreta2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="placaCarreta3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="placaCarreta3"/>
+		<property name="com.jaspersoft.studio.field.label" value="placaCarreta3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="uf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="uf"/>
+		<property name="com.jaspersoft.studio.field.label" value="uf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veiculos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cnh" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cnh"/>
+		<property name="com.jaspersoft.studio.field.label" value="cnh"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cat"/>
+		<property name="com.jaspersoft.studio.field.label" value="cat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="motorista" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="motorista"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empresas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item1" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item1"/>
+		<property name="com.jaspersoft.studio.field.label" value="item1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item2" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item2"/>
+		<property name="com.jaspersoft.studio.field.label" value="item2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item3" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item3"/>
+		<property name="com.jaspersoft.studio.field.label" value="item3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item4" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item4"/>
+		<property name="com.jaspersoft.studio.field.label" value="item4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item5" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item5"/>
+		<property name="com.jaspersoft.studio.field.label" value="item5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item6" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item6"/>
+		<property name="com.jaspersoft.studio.field.label" value="item6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item7" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item7"/>
+		<property name="com.jaspersoft.studio.field.label" value="item7"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item8" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item8"/>
+		<property name="com.jaspersoft.studio.field.label" value="item8"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item9" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item9"/>
+		<property name="com.jaspersoft.studio.field.label" value="item9"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item10" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="item10"/>
+		<property name="com.jaspersoft.studio.field.label" value="item10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs1"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs2"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs3"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs4"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs5"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs6" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs6"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs7" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs7"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs7"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs8"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs8"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs9" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs9"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs9"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs10" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obs10"/>
+		<property name="com.jaspersoft.studio.field.label" value="obs10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="carga1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="carga1"/>
+		<property name="com.jaspersoft.studio.field.label" value="carga1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="carga2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="carga2"/>
+		<property name="com.jaspersoft.studio.field.label" value="carga2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="carga3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="carga3"/>
+		<property name="com.jaspersoft.studio.field.label" value="carga3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nota1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nota1"/>
+		<property name="com.jaspersoft.studio.field.label" value="nota1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nota2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nota2"/>
+		<property name="com.jaspersoft.studio.field.label" value="nota2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nota3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nota3"/>
+		<property name="com.jaspersoft.studio.field.label" value="nota3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="regimelimpeza1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="regimelimpeza1"/>
+		<property name="com.jaspersoft.studio.field.label" value="regimelimpeza1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="regimelimpeza2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="regimelimpeza2"/>
+		<property name="com.jaspersoft.studio.field.label" value="regimelimpeza2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="regimelimpeza3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="regimelimpeza3"/>
+		<property name="com.jaspersoft.studio.field.label" value="regimelimpeza3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="checklist"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="550" height="73" uuid="8fe5345d-57ac-46f0-9198-42717ce3e1b7"/>
+			</rectangle>
+			<line>
+				<reportElement x="110" y="0" width="1" height="73" uuid="7871b1f9-7601-48d8-8f57-1f3011df1983"/>
+			</line>
+			<line>
+				<reportElement x="450" y="0" width="1" height="73" uuid="1ef4adf6-88db-4890-a667-8dadf0e31dd0"/>
+			</line>
+			<staticText>
+				<reportElement x="194" y="6" width="256" height="30" uuid="60c6a7d9-0564-4e16-93c4-2ac80f375854"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sistema de Qualidade]]></text>
+			</staticText>
+			<line>
+				<reportElement x="111" y="36" width="339" height="1" uuid="7d58fbb1-d9aa-4167-ac2d-9029340efc66"/>
+			</line>
+			<staticText>
+				<reportElement x="121" y="40" width="318" height="36" uuid="19e0a1bd-536a-4386-b4cf-7af0aff4f5a6"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[CHECK LIST DE INSPEÇÃO DO CAMINHÃO – CARREGAMENTO DE FARELO DE SOJA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="18" width="50" height="22" uuid="3c999fc1-731b-4a9c-bf03-9815f88e52b2"/>
+				<text><![CDATA[RQ_SLG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="40" width="50" height="22" uuid="feb4a0f0-87da-483a-babb-4bea96efada2"/>
+				<text><![CDATA[REV. 01]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="28" width="90" height="40" uuid="2e63fca1-7915-4451-9146-434ca6bf5379"/>
+				<imageExpression><![CDATA["C:/DevSoftware/Reports/camera.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="490" y="28" width="50" height="22" uuid="3d761af3-2387-40b3-9bb9-14b3b81ef16a"/>
+				<text><![CDATA[10.02]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="531" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="550" height="159" uuid="165cd077-481a-4493-a8b7-2f3ccab22333"/>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="20" width="550" height="1" uuid="3e949738-6e96-40b0-92f0-97c25fcd6c20"/>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="550" height="1" uuid="820de094-7e00-47e3-b20a-23ef9e54d5aa"/>
+			</line>
+			<line>
+				<reportElement x="0" y="60" width="550" height="1" uuid="a06938c8-eb6c-4a3a-b5eb-de1113011484"/>
+			</line>
+			<line>
+				<reportElement x="0" y="80" width="550" height="1" uuid="54219d79-8805-4ce3-9501-47ede1c0d2d1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="100" width="550" height="1" uuid="3256a333-002d-421f-8c63-3586c5f7add4"/>
+			</line>
+			<line>
+				<reportElement x="0" y="120" width="550" height="1" uuid="4e26a5c1-b49d-475d-80da-593ba05fdb38"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="20" width="40" height="20" uuid="5301e832-16ec-4578-b932-c8e5e05292d7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Destino:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="21" width="40" height="20" uuid="4550144b-6037-44b5-bdc3-2a4270a8f90e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="40" width="70" height="20" uuid="d8e639e5-0d08-412d-8a2a-5eb57897ffac"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[N° Nota Fiscal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="60" width="80" height="20" uuid="ec785e50-c479-4b3a-965a-79fb4df20a5b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Transportadora:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="60" width="40" height="20" uuid="8777cf22-b659-4b81-931c-4254b6070a2a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Fone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="80" width="50" height="20" uuid="e80d5f36-35cd-4543-8815-584b88984ab2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[N° Lacres:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="100" width="50" height="20" uuid="57cbbc51-71ff-498e-b843-ede46b5c35a3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Motorista:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="120" width="50" height="20" uuid="ddf70261-84cb-46c8-8fab-ea174f5def9d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Placas:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="140" width="550" height="1" uuid="7dc77ec9-0648-405b-bab4-6955cbed7b87"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="140" width="50" height="20" uuid="1c8258fb-e62d-42e2-8453-f09437a8b240"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[N° CNH:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="120" width="40" height="20" uuid="346cf775-b521-438c-be90-a629e832adca"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[UF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="140" width="50" height="20" uuid="8991ab89-b773-4397-8ab3-744c3edc194f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Categoria:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="21" width="210" height="18" uuid="fd0bb00b-5565-4c8f-a205-3b5765aeb172"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="21" width="200" height="18" uuid="6c32382f-1e33-4738-a1df-84ddedc78d94"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="41" width="230" height="18" uuid="7225b88d-3eb3-468b-a58a-6a4b6379a931"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{notacarga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="59" width="170" height="22" uuid="82c9376f-997e-4a6f-a971-e40c1973d7a4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{transportadora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="101" width="310" height="20" uuid="3870f3ab-0eca-49ba-bf22-1975be0be8e8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motorista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="80" width="470" height="20" uuid="31febaff-4c61-44a8-aec4-e554043a6d36"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lacres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="61" width="144" height="20" uuid="31f1a532-8770-417a-86fc-821992e49789"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="121" width="60" height="20" uuid="0969d31a-9164-4ef3-b6ea-a111867397ad"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="121" width="60" height="20" uuid="4e8c6d08-2e22-4d80-8484-8fe1f1a953c4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placaCarreta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="120" width="51" height="20" uuid="90e24de2-8555-4fb3-80cd-e2929625966c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placaCarreta2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="121" width="60" height="19" uuid="c77a822d-1cbc-403b-93b7-c75147720f09"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placaCarreta3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="140" width="160" height="20" uuid="0c145a09-3382-47f4-ac12-0f77d7ea6ef9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cnh}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="141" width="100" height="18" uuid="0d38d664-340b-4dfa-9bc7-d1f74395da34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cat}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="171" width="550" height="349" uuid="1e01b42a-2e71-4d8a-9547-752f68d3056c"/>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="191" width="550" height="1" uuid="0105ef13-aa24-49b7-8071-125fb57848c9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="210" width="550" height="1" uuid="51e3692d-75eb-4c8d-8b37-2a883ff51acc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="338" width="550" height="1" uuid="5946fd28-2b54-4d6f-bbf7-b8cf7077ff4c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="258" width="550" height="1" uuid="bfa49598-e77e-4ced-af67-64886d8cbe06"/>
+			</line>
+			<line>
+				<reportElement x="0" y="278" width="550" height="1" uuid="29d43278-794f-4a98-b8b8-732a9a0c1a91"/>
+			</line>
+			<line>
+				<reportElement x="0" y="308" width="550" height="1" uuid="7dd6c8d5-659d-4e02-9953-3aaa9058c336"/>
+			</line>
+			<line>
+				<reportElement x="0" y="230" width="550" height="1" uuid="56bf0651-8638-4b5a-9303-d66d8fac79eb"/>
+			</line>
+			<line>
+				<reportElement x="0" y="368" width="550" height="1" uuid="aa9da310-a28b-434c-bb29-7d2d7821a7e3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="388" width="550" height="1" uuid="8da8ccc9-311d-4c24-9c0b-8670629267ce"/>
+			</line>
+			<line>
+				<reportElement x="0" y="420" width="550" height="1" uuid="2f41cee8-97d5-48dc-96f3-321f3c792827"/>
+			</line>
+			<line>
+				<reportElement x="0" y="440" width="550" height="1" uuid="b148a73b-7d5d-4999-9a03-749b97bbd65f"/>
+			</line>
+			<line>
+				<reportElement x="270" y="20" width="1" height="20" uuid="9208fa1c-0174-46cf-827b-4e695fde012e"/>
+			</line>
+			<line>
+				<reportElement x="350" y="60" width="1" height="20" uuid="1950df76-9810-4f09-8396-f3d14bd42c2c"/>
+			</line>
+			<line>
+				<reportElement x="370" y="120" width="1" height="20" uuid="83fd4160-677d-4c32-b766-42b4850b0a29"/>
+			</line>
+			<line>
+				<reportElement x="370" y="139" width="1" height="20" uuid="bd11479a-d97b-416c-8c0f-8ea77fcf38ee"/>
+			</line>
+			<line>
+				<reportElement x="30" y="171" width="1" height="269" uuid="33252de0-dfe1-4e8d-a8c8-7ab11475b5fa"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="191" width="28" height="18" uuid="b7dbfdb5-ae9a-45cb-8b76-9a6c183b5204"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="211" width="28" height="18" uuid="34d53343-fc77-46d3-b34e-46df08cbda5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="235" width="28" height="18" uuid="36158d25-692f-4ffa-ace5-90b581198408"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="259" width="28" height="18" uuid="e24f8c83-25aa-48f9-b800-1523f9a1d5fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="288" width="28" height="18" uuid="887f4aba-bcdc-4f99-a601-80688b9380b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="314" width="28" height="18" uuid="9e1219ab-e341-400e-8d1d-cbdfa88350a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="339" width="28" height="18" uuid="e092fb25-f6a1-468e-9b5d-58de6534a5cf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="369" width="28" height="18" uuid="7befa3dc-d95c-4495-950c-d81a32c3c961"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="396" width="28" height="18" uuid="4b126b01-a307-4c48-8d49-56219b161572"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="190" width="40" height="20" uuid="0c0d4112-41be-4e70-a12e-5d19add6e57e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[EPIs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="170" width="110" height="20" uuid="ccf43a0c-75b1-4b32-9faf-1efa62df88d8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Itens analisados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="421" width="28" height="18" uuid="a8ebf456-29ad-4b83-8bb6-2030ba94677a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[10
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="220" y="171" width="1" height="269" uuid="71f60e37-29da-428c-908d-4ab7d5a30879"/>
+			</line>
+			<staticText>
+				<reportElement x="70" y="210" width="150" height="20" uuid="0b83a5d6-8e09-43eb-a5d0-7b7da82c2712"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Tacógrafo e documentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="230" width="190" height="28" uuid="7b636fd0-004a-4633-8a02-87cf378d3401"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Compartimento de carga limpo, sem odores pragas ou resto de carga anterior]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="258" width="189" height="20" uuid="c52830f4-f4f3-403a-a54f-c4d183f6c604"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Compartimento de carga sem umidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="279" width="189" height="27" uuid="37caf340-af12-4861-9c81-ac19594713c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tampas do compartimento de carga com boa vedação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="309" width="189" height="29" uuid="e95df55a-61a2-4682-9823-1504353313c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Compartimento de carga sem furos ou danificados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="338" width="170" height="30" uuid="58c44c2f-309f-4a18-b764-6a95384d51fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Lona limpa, seca, sem furos e em boas condições ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="368" width="130" height="20" uuid="da98375e-b7aa-43ea-aff8-461445b8abd1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Pneus em bom estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="390" width="185" height="30" uuid="906e25ea-9fcf-4be7-a5c0-57ecb2e00850"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Não possui vazamento de diesel e óleos lubrificantes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="420" width="150" height="20" uuid="a54d2afe-3a7f-4367-881b-34ff99b465c8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Condições do Pré Cinto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="440" width="192" height="20" uuid="fccc881b-84b2-4416-a575-0360382b8340"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Produtos Carregados nas 3 ultimas cargas]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="460" width="550" height="1" uuid="acbc0518-c87b-40d8-a986-6f9c809d689a"/>
+			</line>
+			<line>
+				<reportElement x="0" y="480" width="550" height="1" uuid="8c70972a-191c-4240-b04b-6ca0c2fa8c6a"/>
+			</line>
+			<line>
+				<reportElement x="0" y="500" width="550" height="1" uuid="6d6f31a5-047f-4e0e-a8ec-57e024c1f6d0"/>
+			</line>
+			<line>
+				<reportElement x="30" y="461" width="1" height="59" uuid="df9f0ba9-0ab5-4092-8d10-a3b06d110938"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="461" width="28" height="18" uuid="8035f49c-a293-424d-977b-3abe98781fcc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="481" width="28" height="18" uuid="d08edcdd-45ad-4827-90a1-9fbe93f52e69"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="501" width="28" height="18" uuid="67935706-9eb1-4b33-a98f-d042f97577dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="170" width="31" height="20" uuid="6967f385-83fb-4d54-a281-d7c4c2ce775a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[C/NC]]></text>
+			</staticText>
+			<line>
+				<reportElement x="271" y="171" width="1" height="270" uuid="02c84696-e414-4e48-b741-8b1a8e45d000"/>
+			</line>
+			<staticText>
+				<reportElement x="360" y="170" width="90" height="20" uuid="c73c4300-e064-466c-afbf-07789d6dbf00"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observações]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="191" width="50" height="18" uuid="4e236734-3d9c-49cc-881d-41e25ce8b1f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item1} ==true? "C " : ""
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="190" width="270" height="20" uuid="8cd1b859-78c5-43a4-a014-59aa7b68e0f8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="209" width="270" height="22" uuid="edfadd87-f976-487e-81e5-3b6d147e01a0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="231" width="270" height="26" uuid="236f7b65-f028-43dc-8789-c0f104fa4f76"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="258" width="270" height="20" uuid="3f9cdcf1-2d6a-49a2-87f1-bb0f8a0099d7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="279" width="270" height="28" uuid="9e4b1c0b-50b3-401b-a761-79e36f569f8e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="310" width="270" height="28" uuid="ddcc6dc2-01ea-4dcc-91f5-96987706611d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="340" width="270" height="28" uuid="01ae8b62-f9c0-4964-991c-ff4f04b2ab4f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="368" width="270" height="20" uuid="edc6638c-c0c5-4aa3-976c-8bf1e7df8fea"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="390" width="270" height="30" uuid="4cfb0081-a095-476f-a1d3-28b9a6d97cd1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="420" width="270" height="20" uuid="206b5827-7882-473f-8e7a-707e840d4b11"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obs10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="460" width="158" height="20" uuid="778d0223-641c-4339-b01f-da26a6878abd"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{carga1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="480" width="158" height="20" uuid="2479f2f9-9de3-4e86-ad00-14cba4ff72b0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{carga2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="501" width="158" height="18" uuid="390c6078-3daa-4db3-9ba8-426072d4cac0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{carga3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="461" width="90" height="19" uuid="34385cf2-35c7-4b56-8c45-6382fcf2c975"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nota1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="481" width="91" height="19" uuid="4830e96b-8ec7-46e0-8891-94c448df9a27"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nota2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="501" width="90" height="19" uuid="4e4ac4a7-22a6-4ed7-9967-79dae2a11a1b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nota3}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="195" y="441" width="1" height="79" uuid="c8838431-f16f-45c4-8898-fbbef7e68ce4"/>
+			</line>
+			<staticText>
+				<reportElement x="221" y="440" width="69" height="20" uuid="200078fb-4e9d-451a-9f32-94ce689cde56"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº IDTF]]></text>
+			</staticText>
+			<line>
+				<reportElement x="290" y="441" width="1" height="79" uuid="d010bf8a-67f5-479a-97de-babef8fbe21e"/>
+			</line>
+			<staticText>
+				<reportElement x="291" y="440" width="253" height="20" uuid="ef4a5d5f-85cd-416e-961b-4291fc146c4f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Regime de Limpeza]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="460" width="244" height="19" uuid="02e7da73-6bab-4309-b990-9d6f1d7e7041"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{regimelimpeza1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="480" width="244" height="20" uuid="95713f7d-e95a-470f-bf96-67f771a4e566"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{regimelimpeza2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="499" width="244" height="20" uuid="4b8d1d32-074c-4d70-9389-c00ad675669b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{regimelimpeza3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="0" width="40" height="20" uuid="823ae09b-0a29-4451-9f03-62670f2f7e47"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="1" width="40" height="20" uuid="c7981efe-0547-4e9d-a3dd-43e139ed4061"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nº]]></text>
+			</staticText>
+			<line>
+				<reportElement x="440" y="0" width="1" height="20" uuid="2c894bc4-d843-482a-92f9-a9a4c41626c5"/>
+			</line>
+			<textField>
+				<reportElement x="465" y="0" width="84" height="20" uuid="df62f57d-3516-4e4e-9666-31cf6c5f0096"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="210" width="50" height="20" uuid="b4b4c4bf-b55d-4741-8073-2075155e15b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item2} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="231" width="49" height="28" uuid="df95e11b-349d-4109-8e90-bb4f192cb52b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item3} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="259" width="50" height="18" uuid="b23663ec-d0e4-4661-84ea-9a68bad9a8e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item4} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="279" width="49" height="30" uuid="b64f3284-9f48-4865-b401-9480c5eed13d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item5} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="309" width="50" height="30" uuid="1472574a-e617-40e1-af69-7551bda1c9b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item6} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="339" width="49" height="30" uuid="2ed2d252-7a2d-40cb-b256-fc3658b51fe3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item7} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="369" width="50" height="20" uuid="441b3a1d-fa47-4bcb-8a18-044c5436b4bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item8} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="390" width="50" height="30" uuid="70fad6d9-ff0e-4247-bee3-64a7e86e1541"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item9} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="421" width="50" height="18" uuid="707f7844-ce59-4069-a2af-fd20d06519fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item10} ==true? "C " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="1" width="120" height="18" uuid="779f2774-56e2-4353-bcec-5810bf994af5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datag}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="121" width="64" height="18" uuid="af173fb4-86d3-408f-89b5-7d31581854a4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uf}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="548" height="110" uuid="904e79d8-b825-4744-81db-e1104a2c3694"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Declaro que acompanhei a vistoria do caminhão pela empresa Camera Agroindustrial S.A, sendo que, todos os itens, equipamentos e placas para o carregamento deste produto estavam devidamente em dia, bem como minha documentação e do caminhão, pelo, que me comprometo em manter, apresentar e em caso de necessidade consertar ou substituir tudo o que venha a ser danificado durante a viagem, a fim de atender a legislação em vigor.
+Obs.: O não cumprimento de qualquer dos itens acima impossibilita o carregamento
+]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="14" y="14" width="200" height="1" uuid="fce0635e-bf62-48b1-a117-c97649ee13b7"/>
+			</line>
+			<line>
+				<reportElement x="310" y="14" width="200" height="1" uuid="586ee05b-16c5-4af8-966a-c475de1777ea"/>
+			</line>
+			<textField>
+				<reportElement x="310" y="15" width="200" height="30" uuid="38fc9e4c-16d7-4fdd-b81c-4b39b23211b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{motorista}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="15" width="200" height="30" uuid="34427d61-b90b-4dc4-8990-408647056a95"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Responsável pela Inspeção]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

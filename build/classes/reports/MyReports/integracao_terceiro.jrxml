@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="integracao_terceiro" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4921653e-78a0-4e85-be79-a68e2c32c75c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dbinfox"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="217"/>
+	<parameter name="ID" class="java.lang.Integer"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Leonardo\\Documents\\NetBeansProjects\\prjinfox\\src\\reports\\MyReports\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from pessoas p
+join integracao i
+on p.idpes = i.idpes
+where i.idinteg= $P{ID}]]>
+	</queryString>
+	<field name="idinteg" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idinteg"/>
+		<property name="com.jaspersoft.studio.field.label" value="idinteg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="integracao"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datainteg" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="datainteg"/>
+		<property name="com.jaspersoft.studio.field.label" value="datainteg"/>
+	</field>
+	<field name="setor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="setor"/>
+		<property name="com.jaspersoft.studio.field.label" value="setor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="integracao"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="validade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="validade"/>
+		<property name="com.jaspersoft.studio.field.label" value="validade"/>
+	</field>
+	<field name="COLUMN_5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="setor"/>
+		<property name="com.jaspersoft.studio.field.label" value="setor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="integracao"/>
+	</field>
+	<field name="idpes" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idpes"/>
+		<property name="com.jaspersoft.studio.field.label" value="idpes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.label" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cidade"/>
+		<property name="com.jaspersoft.studio.field.label" value="cidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="92" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="0" width="550" height="81" uuid="4f102fa4-7fc1-4876-bf88-fc4c9785a8cf"/>
+			</rectangle>
+			<image>
+				<reportElement x="10" y="28" width="90" height="40" uuid="c7c9f97c-91ed-4705-b4c2-c8028b73a77d"/>
+				<imageExpression><![CDATA["C:/DevSoftware/Reports/camera.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="111" y="36" width="339" height="1" uuid="dde6bee7-a783-4335-83ec-b7117c4b9097"/>
+			</line>
+			<line>
+				<reportElement x="110" y="0" width="1" height="81" uuid="cf7898f6-a9ae-4e65-85e4-3eaae63ee080"/>
+			</line>
+			<line>
+				<reportElement x="450" y="0" width="1" height="89" uuid="c3d6c474-3e0e-4384-b394-161c7c99d966"/>
+			</line>
+			<staticText>
+				<reportElement x="470" y="18" width="70" height="22" uuid="c55606da-e634-40d0-9a30-3799d9aac481"/>
+				<text><![CDATA[RQ_SLG.09.01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="33" width="50" height="22" uuid="f423d3c6-d566-4be5-9f2e-260a6da2a688"/>
+				<text><![CDATA[REV. 01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="10" width="240" height="30" uuid="b3563c9c-2abc-4948-a862-3ac9e4599a8b"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sistema de Qualidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="43" width="190" height="38" uuid="d934f83e-ec0e-4509-ab8d-5188b350cd08"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[FICHA DE INTEGRAÇÃO – CONFORME NR 01 - MTE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="650" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="10" y="10" width="100" height="14" uuid="040476d1-ba01-4900-ae55-2c095a2eb015"/>
+				<text><![CDATA[Nome do colaborador:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="24" width="68" height="14" uuid="e8089cf4-481b-42fd-b068-7ecab8984bb6"/>
+				<text><![CDATA[Cargo/Função:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="52" width="38" height="14" uuid="5ac714e5-7210-4f4e-871b-b8fef02f4e83"/>
+				<text><![CDATA[Setor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="38" width="98" height="14" uuid="d0c45b96-814c-4f53-aba9-3ed5e2865738"/>
+				<text><![CDATA[Data de contratação:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="111" y="76" width="340" height="20" uuid="2beb3f90-9952-4ecf-a5f1-fa4d272e215a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="210" y="77" width="172" height="19" uuid="599b2295-f70c-49f8-b078-85dca0936813"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[SEGURANÇA NO TRABALHO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="110" width="550" height="530" uuid="7d32dea9-6d11-453b-83ec-71ef8721fe74"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Objetivos: A presente ordem de serviço tem por objetivo o cumprimento do que está determinado na NR 01 - Norma Regulamentadora nr.01, aprovada pela Portaria 3.214, de 08/06/1978, que estabelece no subitem 1.7 que cabe ao empregador = a) cumprir e fazer cumprir as disposições legais e regulamentares sobre segurança e medicina do trabalho; b) elaborar ordens de serviço sobre segurança e medicina do trabalho, dando ciência aos empregados, com os seguintes objetivos: I – prevenir atos inseguros no desempenho do trabalho; II – divulgar as obrigações e proibições que os empregados devem conhecer e cumprir; III – dar conhecimento aos empregados de que serão passíveis de punição pelo descumprimento das ordens de serviço expedidas; IV – determinar os procedimentos que deverão ser adotados em caso de acidente de trabalho e doenças profissionais e do trabalho; cabe ao empregado = a) cumprir as disposições legais e regulamentares sobre segurança e medicina do trabalho, inclusive as ordens de serviço expedidas pelo empregador; b) usar EPI fornecido pelo empregador; c) submeter-se aos exames médicos previstos nas NRs; d) colaborar com a empresa na aplicação das NRs.
+Eu, funcionário abaixo assinado, estou ciente e concordo que, apartir de minha admissão na CAMERA AGROALIMENTOS S/A e em todo período de contrato com a mesma, para a realização de minhas atividades laborativas descritas neste documento, devo cumprir com as disposições legais e regulamentares sobre segurança e medicina do trabalho, dentre as quais as destacadas a seguir (as orientações são generalizadas e algumas podem não ser específicas para as minhas atividades):
+	Prevenir atos inseguros no desempenho do trabalho;
+	Submeter-me a todos os exames médicos previstos no PCMSO – admissional, periódicos, de retorno ao trabalho, de mudança de função e demissional, da mesma forma, submeter-me aos exames complementares porventura indicados no PCMSO.
+	Participar das palestras expositivas sobre assuntos de interesse da empresa, especialmente os relacionados com medicina e segurança do trabalho, quando comunicadas de sua realização.
+	Colaborar com a empresa na aplicação das Normas Regulamentadoras – MTE
+	Recebi treinamento sobre Uso de EPI – Como usar equipamentos de proteção individual – quando indicados para minha função, para a finalidade destinada, sempre que necessário e antes de iniciar atividades que exijam seu uso, mantendo-os limpos sob minha guarda e conservação, conforme NR 06;
+	Não participar de brincadeiras ou outras situações que possam perturbar a ordem e as atividades na empresa;
+	Fazer uso de calçados fechados no desempenho de minhas atividades na empresa, conforme indicação do PPRA;
+	Não transitar pela empresa sem o uso dos EPIs adequados, quando forem para mim recomendados;
+	Não consumir bebida alcoólica ou qualquer outro tipo de entorpecente, no ambiente da empresa;
+	Proibido o uso de bebidas alcoólicas ou trabalhar fora das condições físicas e mentais consideradas normais;
+	Proibido fumar nas dependências da empresa;
+	Não poluir o ambiente em que estiver trabalhando, colocar o lixo no recipiente adequado;
+	Não correr nas dependências da empresa – exceto em situações excepcionais de emergência;
+	Usar de forma adequada e manter em ordem e conservado os sanitários e vestiários;
+	Não portar arma de fogo ou outras quaisquer nos ambientes de trabalho da empresa;
+	Informar com urgência ao responsável pela empresa qualquer acidente ou incidente ocorrido nas dependências da empresa, mesmo que não haja vítima;
+	Informar imediatamente ao responsável pela empresa ou pelo setor de trabalho qualquer acidente que porventura tenha sofrido, seja lesão cortante, contusões, fraturas, choques elétricos ou outros quaisquer, procurando por atendimento médico em serviço de urgência/emergência o mais próximo do local do acidente, solicitar atestado médico ao responsável pelo atendimento.
+	local do acidente, solicitar atestado médico ao responsável pelo atendimento.
+	Ao verificar qualquer condição insegura na produção colaborar, comunicando imediatamente o responsável pela empresa;
+	Colaborar com a empresa não permitindo a permanência de pessoas não autorizadas nas áreas de serviço;
+	Planejar antes de executar a tarefa recebida, adotando sempre o procedimento mais seguro;
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="10" width="96" height="14" uuid="f2cba216-2e8c-4996-87fd-51218247a39d"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="48" y="52" width="100" height="14" uuid="681f9aca-cf9c-4a0d-a29c-c09d33a2a158"/>
+				<textFieldExpression><![CDATA[$F{setor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="38" width="100" height="14" uuid="b40433bf-cf9c-4da6-8db2-05730ddf55d6"/>
+				<textFieldExpression><![CDATA[$F{datainteg}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60">
+			<subreport>
+				<reportElement x="60" y="0" width="200" height="60" uuid="1fb1b37f-8009-4522-a623-e1bec0c72abe"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "integracao_terceiro_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

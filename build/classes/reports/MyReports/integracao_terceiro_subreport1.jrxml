@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="integracao_terceiro_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1bf9b141-396e-4a13-9541-7b8bc082261f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from pessoas p
+join integracao i
+on p.idpes = i.idpes
+where i.idinteg= $P{ID}]]>
+	</queryString>
+	<field name="idpes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cnh" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datacontratacao" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="listaequipamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="listaepi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr35" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr10" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr33" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr12" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="outroscertificados" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="certificados" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idemp" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="razao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="statusInteg" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="iud" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idinteg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datainteg" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="setor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idempresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idusuario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="empnome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="validade" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="55" width="100" height="20" uuid="27fec75b-f4cd-4ce6-8ab1-c67ce7f5fea7"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="19" width="512" height="71" uuid="15d2b831-ed45-4ce7-a37b-dccb7f3b274a"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Objetivos: A presente ordem de serviço tem por objetivo o cumprimento do que está determinado na NR 01 - Norma Regulamentadora nr.01, aprovada pela Portaria 3.214, de 08/06/1978, que estabelece no subitem 1.7 que cabe ao empregador = a) cumprir e fazer cumprir as disposições legais e regulamentares sobre segurança e medicina do trabalho; b) elaborar ordens de serviço sobre segurança e medicina do trabalho, dando ciência aos empregados, com os seguintes objetivos: I – prevenir atos inseguros no desempenho do trabalho; II – divulgar as obrigações e proibições que os empregados devem conhecer e cumprir; III – dar conhecimento aos empregados de que serão passíveis de punição pelo descumprimento das ordens de serviço expedidas; IV – determinar os procedimentos que deverão ser adotados em caso de acidente de trabalho e doenças profissionais e do trabalho; cabe ao empregado = a) cumprir as disposições legais e regulamentares sobre segurança e medicina do trabalho, inclusive as ordens de serviço expedidas pelo empregador; b) usar EPI fornecido pelo empregador; c) submeter-se aos exames médicos previstos nas NRs; d) colaborar com a empresa na aplicação das NRs.
+Eu, funcionário abaixo assinado, estou ciente e concordo que, apartir de minha admissão na CAMERA AGROALIMENTOS S/A e em todo período de contrato com a mesma, para a realização de minhas atividades laborativas descritas neste documento, devo cumprir com as disposições legais e regulamentares sobre segurança e medicina do trabalho, dentre as quais as destacadas a seguir (as orientações são generalizadas e algumas podem não ser específicas para as minhas atividades):
+	Prevenir atos inseguros no desempenho do trabalho;
+	Submeter-me a todos os exames médicos previstos no PCMSO – admissional, periódicos, de retorno ao trabalho, de mudança de função e demissional, da mesma forma, submeter-me aos exames complementares porventura indicados no PCMSO.
+	Participar das palestras expositivas sobre assuntos de interesse da empresa, especialmente os relacionados com medicina e segurança do trabalho, quando comunicadas de sua realização.
+	Colaborar com a empresa na aplicação das Normas Regulamentadoras – MTE
+	Recebi treinamento sobre Uso de EPI – Como usar equipamentos de proteção individual – quando indicados para minha função, para a finalidade destinada, sempre que necessário e antes de iniciar atividades que exijam seu uso, mantendo-os limpos sob minha guarda e conservação, conforme NR 06;
+	Não participar de brincadeiras ou outras situações que possam perturbar a ordem e as atividades na empresa;
+	Fazer uso de calçados fechados no desempenho de minhas atividades na empresa, conforme indicação do PPRA;
+	Não transitar pela empresa sem o uso dos EPIs adequados, quando forem para mim recomendados;
+	Não consumir bebida alcoólica ou qualquer outro tipo de entorpecente, no ambiente da empresa;
+	Proibido o uso de bebidas alcoólicas ou trabalhar fora das condições físicas e mentais consideradas normais;
+	Proibido fumar nas dependências da empresa;
+	Não poluir o ambiente em que estiver trabalhando, colocar o lixo no recipiente adequado;
+	Não correr nas dependências da empresa – exceto em situações excepcionais de emergência;
+	Usar de forma adequada e manter em ordem e conservado os sanitários e vestiários;
+	Não portar arma de fogo ou outras quaisquer nos ambientes de trabalho da empresa;
+	Informar com urgência ao responsável pela empresa qualquer acidente ou incidente ocorrido nas dependências da empresa, mesmo que não haja vítima;
+	Informar imediatamente ao responsável pela empresa ou pelo setor de trabalho qualquer acidente que porventura tenha sofrido, seja lesão cortante, contusões, fraturas, choques elétricos ou outros quaisquer, procurando por atendimento médico em serviço de urgência/emergência o mais próximo do local do acidente, solicitar atestado médico ao responsável pelo atendimento.
+	local do acidente, solicitar atestado médico ao responsável pelo atendimento.
+	Ao verificar qualquer condição insegura na produção colaborar, comunicando imediatamente o responsável pela empresa;
+	Colaborar com a empresa não permitindo a permanência de pessoas não autorizadas nas áreas de serviço;
+	Planejar antes de executar a tarefa recebida, adotando sempre o procedimento mais seguro;
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="107" y="23" width="100" height="20" uuid="b7d4e402-81f9-49a4-8620-b3a845d5ce67"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

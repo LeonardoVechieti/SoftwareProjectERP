@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatoriointegracaoempresasativas" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6478552-98c2-434f-844e-8722546601b1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select p.idpes, p.nome, p.cpf, e.nome, e.cnpj, DATE_FORMAT (i.datainteg,'%d/%m/%Y'), DATE_FORMAT (i.validade,'%d/%m/%Y'), i.statusInteg, i.setor from integracao i
+join pessoas p
+on i.idpes = p.idpes
+join empresas e
+on e.idemp = i.idemp
+where i.statusInteg='1'
+order by e.nome]]>
+	</queryString>
+	<field name="idpes" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idpes"/>
+		<property name="com.jaspersoft.studio.field.label" value="idpes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.label" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN_4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empresas"/>
+	</field>
+	<field name="cnpj" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cnpj"/>
+		<property name="com.jaspersoft.studio.field.label" value="cnpj"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empresas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATE_FORMAT (i.datainteg,&apos;%d/%m/%Y&apos;)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name">
+			<![CDATA[DATE_FORMAT (i.datainteg,'%d/%m/%Y')]]>
+		</property>
+		<property name="com.jaspersoft.studio.field.label">
+			<![CDATA[DATE_FORMAT (i.datainteg,'%d/%m/%Y')]]>
+		</property>
+	</field>
+	<field name="DATE_FORMAT (i.validade,&apos;%d/%m/%Y&apos;)" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name">
+			<![CDATA[DATE_FORMAT (i.validade,'%d/%m/%Y')]]>
+		</property>
+		<property name="com.jaspersoft.studio.field.label">
+			<![CDATA[DATE_FORMAT (i.validade,'%d/%m/%Y')]]>
+		</property>
+	</field>
+	<field name="statusInteg" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="statusInteg"/>
+		<property name="com.jaspersoft.studio.field.label" value="statusInteg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="integracao"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="setor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="setor"/>
+		<property name="com.jaspersoft.studio.field.label" value="setor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="integracao"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="77" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="800" height="50" uuid="fcd2967c-7ea6-4273-992c-df129626dea2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="170" y="16" width="414" height="18" uuid="c38bb1b7-fc2c-4bfe-8ded-cc90e3a90e2b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Relatório: Empresas ativas com integração]]></text>
+			</staticText>
+			<line>
+				<reportElement x="140" y="0" width="1" height="50" uuid="a410c6de-ee55-465e-b2f6-2e0ec866fa73"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="700" y="10" width="100" height="16" uuid="c0f2dadc-dd74-4426-b392-464b37f17503"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="20" y="13" width="100" height="24" uuid="b6745d9c-fab7-4394-add9-8ed0ece34595"/>
+				<imageExpression><![CDATA["C:/DevSoftware/Reports/camera.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="680" y="0" width="1" height="50" uuid="1429e08e-8a3e-4f50-9980-da3aeb3d2cbb"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="470" y="0" width="100" height="30" uuid="efd05e4f-731a-452d-9cf3-7c9c17b71d7f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="352fb09e-fb20-4c00-86b0-a63a2008b779"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="100" height="30" uuid="0b67a37f-03b4-4c5a-bb07-99f26f287429">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ac87c13-aed6-437b-9a6d-cc448424dd61"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Validade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="0" width="100" height="30" uuid="7fbb6825-daa7-47d6-9cd5-c78722da2871">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d72595cf-4390-4e3a-9c8e-2c2c1a34488c"/>
+				</reportElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="50" height="30" uuid="4bf8af3a-10f4-47a8-abed-9c7c1d26c9f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db620d40-7af2-42ec-9271-ae2a0f471335"/>
+				</reportElement>
+				<text><![CDATA[idpes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="140" height="30" uuid="7122f4b7-800e-49c0-aeb0-7ee86470468d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="946f7b58-284b-4658-a7fe-f3809af5f32d"/>
+				</reportElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="1" width="100" height="30" uuid="4887a39e-11d0-4006-9d93-7035845ac201">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="566526e2-5cca-4ec4-a5d0-b61112241f8d"/>
+				</reportElement>
+				<text><![CDATA[cpf]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="470" y="0" width="100" height="16" uuid="afc4f30a-f958-48b9-ba52-593d7c8a751a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="352fb09e-fb20-4c00-86b0-a63a2008b779"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ncontrato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="100" height="16" uuid="fd6bb036-266a-4d69-8713-73e554fade1d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ac87c13-aed6-437b-9a6d-cc448424dd61"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{validade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="670" y="0" width="100" height="16" uuid="a2543fd3-6eb9-427f-8cb9-0eabdc19b406">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d72595cf-4390-4e3a-9c8e-2c2c1a34488c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="0" width="50" height="30" uuid="b4a27821-f9ea-4740-91fb-dd948e8c29cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db620d40-7af2-42ec-9271-ae2a0f471335"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idpes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="140" height="30" uuid="051062d4-619d-471b-9e50-1754a1a02d5c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="946f7b58-284b-4658-a7fe-f3809af5f32d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="30" uuid="50c13ce4-5908-404b-ad66-3a08ea39d892">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="566526e2-5cca-4ec4-a5d0-b61112241f8d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="770" y="24" width="40" height="30" uuid="14555e14-2a41-4cd9-b8d1-6cb54104b68d"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="60" splitType="Stretch"/>
+	</summary>
+</jasperReport>

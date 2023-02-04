@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contrato" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60383113-7a72-420e-bbd3-7e952e91a444">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dbinfox"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="550" height="73" uuid="8fe5345d-57ac-46f0-9198-42717ce3e1b7"/>
+			</rectangle>
+			<line>
+				<reportElement x="110" y="0" width="1" height="73" uuid="7871b1f9-7601-48d8-8f57-1f3011df1983"/>
+			</line>
+			<line>
+				<reportElement x="450" y="0" width="1" height="73" uuid="1ef4adf6-88db-4890-a667-8dadf0e31dd0"/>
+			</line>
+			<staticText>
+				<reportElement x="194" y="6" width="256" height="30" uuid="60c6a7d9-0564-4e16-93c4-2ac80f375854"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sistema de Qualidade]]></text>
+			</staticText>
+			<line>
+				<reportElement x="111" y="36" width="339" height="1" uuid="7d58fbb1-d9aa-4167-ac2d-9029340efc66"/>
+			</line>
+			<staticText>
+				<reportElement x="121" y="40" width="318" height="36" uuid="19e0a1bd-536a-4386-b4cf-7af0aff4f5a6"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[CHECK LIST DE INSPEÇÃO DO CAMINHÃO – CARREGAMENTO DE FARELO DE SOJA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="18" width="50" height="22" uuid="3c999fc1-731b-4a9c-bf03-9815f88e52b2"/>
+				<text><![CDATA[RQ_SLG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="40" width="50" height="22" uuid="feb4a0f0-87da-483a-babb-4bea96efada2"/>
+				<text><![CDATA[REV. 01]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="28" width="90" height="40" uuid="2e63fca1-7915-4451-9146-434ca6bf5379"/>
+				<imageExpression><![CDATA["C:/DevSoftware/Reports/camera.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="490" y="28" width="50" height="22" uuid="3d761af3-2387-40b3-9bb9-14b3b81ef16a"/>
+				<text><![CDATA[10.02]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="357" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="550" height="159" uuid="165cd077-481a-4493-a8b7-2f3ccab22333"/>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="20" width="550" height="1" uuid="3e949738-6e96-40b0-92f0-97c25fcd6c20"/>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="550" height="1" uuid="820de094-7e00-47e3-b20a-23ef9e54d5aa"/>
+			</line>
+			<line>
+				<reportElement x="0" y="60" width="550" height="1" uuid="a06938c8-eb6c-4a3a-b5eb-de1113011484"/>
+			</line>
+			<line>
+				<reportElement x="0" y="80" width="550" height="1" uuid="54219d79-8805-4ce3-9501-47ede1c0d2d1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="100" width="550" height="1" uuid="3256a333-002d-421f-8c63-3586c5f7add4"/>
+			</line>
+			<line>
+				<reportElement x="0" y="120" width="550" height="1" uuid="4e26a5c1-b49d-475d-80da-593ba05fdb38"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="0" width="40" height="20" uuid="697dd495-54ec-42da-a81c-3e2199e410bd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="20" width="40" height="20" uuid="5301e832-16ec-4578-b932-c8e5e05292d7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Destino:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="21" width="40" height="20" uuid="4550144b-6037-44b5-bdc3-2a4270a8f90e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="40" width="70" height="20" uuid="d8e639e5-0d08-412d-8a2a-5eb57897ffac"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[N° Nota Fiscal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="60" width="80" height="20" uuid="ec785e50-c479-4b3a-965a-79fb4df20a5b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Transportadora:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="60" width="40" height="20" uuid="8777cf22-b659-4b81-931c-4254b6070a2a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Fone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="80" width="50" height="20" uuid="e80d5f36-35cd-4543-8815-584b88984ab2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[N° Lacres:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="100" width="50" height="20" uuid="57cbbc51-71ff-498e-b843-ede46b5c35a3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Motorista:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="120" width="50" height="20" uuid="ddf70261-84cb-46c8-8fab-ea174f5def9d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Placas:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="140" width="550" height="1" uuid="7dc77ec9-0648-405b-bab4-6955cbed7b87"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="140" width="50" height="20" uuid="1c8258fb-e62d-42e2-8453-f09437a8b240"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[N° CNH:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="120" width="40" height="20" uuid="346cf775-b521-438c-be90-a629e832adca"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[UF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="140" width="50" height="20" uuid="8991ab89-b773-4397-8ab3-744c3edc194f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Categoria:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="91" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

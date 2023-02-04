@@ -1,0 +1,2 @@
+prop.nome = Mario
+prop.dir = /tmp

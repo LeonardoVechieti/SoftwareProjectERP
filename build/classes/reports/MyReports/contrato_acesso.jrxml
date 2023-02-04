@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contrato" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60383113-7a72-420e-bbd3-7e952e91a444">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dbinfox"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ID" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pessoas where idpes=  $P{ID}]]>
+	</queryString>
+	<field name="idpes" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idpes"/>
+		<property name="com.jaspersoft.studio.field.label" value="idpes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.label" value="cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cnh" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cnh"/>
+		<property name="com.jaspersoft.studio.field.label" value="cnh"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cat"/>
+		<property name="com.jaspersoft.studio.field.label" value="cat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cidade"/>
+		<property name="com.jaspersoft.studio.field.label" value="cidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datacontratacao" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="datacontratacao"/>
+		<property name="com.jaspersoft.studio.field.label" value="datacontratacao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="listaequipamento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="listaequipamento"/>
+		<property name="com.jaspersoft.studio.field.label" value="listaequipamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="listaepi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="listaepi"/>
+		<property name="com.jaspersoft.studio.field.label" value="listaepi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr35" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="nr35"/>
+		<property name="com.jaspersoft.studio.field.label" value="nr35"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr10" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="nr10"/>
+		<property name="com.jaspersoft.studio.field.label" value="nr10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr33" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="nr33"/>
+		<property name="com.jaspersoft.studio.field.label" value="nr33"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nr12" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="nr12"/>
+		<property name="com.jaspersoft.studio.field.label" value="nr12"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="outroscertificados" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="outroscertificados"/>
+		<property name="com.jaspersoft.studio.field.label" value="outroscertificados"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="certificados" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="certificados"/>
+		<property name="com.jaspersoft.studio.field.label" value="certificados"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idemp" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idemp"/>
+		<property name="com.jaspersoft.studio.field.label" value="idemp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="razao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="razao"/>
+		<property name="com.jaspersoft.studio.field.label" value="razao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="statusInteg" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="statusInteg"/>
+		<property name="com.jaspersoft.studio.field.label" value="statusInteg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="iud" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="iud"/>
+		<property name="com.jaspersoft.studio.field.label" value="iud"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idinteg" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idinteg"/>
+		<property name="com.jaspersoft.studio.field.label" value="idinteg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pessoas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="550" height="73" uuid="8fe5345d-57ac-46f0-9198-42717ce3e1b7"/>
+			</rectangle>
+			<line>
+				<reportElement x="110" y="1" width="1" height="73" uuid="7871b1f9-7601-48d8-8f57-1f3011df1983"/>
+			</line>
+			<line>
+				<reportElement x="450" y="1" width="1" height="73" uuid="1ef4adf6-88db-4890-a667-8dadf0e31dd0"/>
+			</line>
+			<staticText>
+				<reportElement x="160" y="11" width="256" height="30" uuid="60c6a7d9-0564-4e16-93c4-2ac80f375854"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sistema de Gestão Industrial]]></text>
+			</staticText>
+			<line>
+				<reportElement x="111" y="37" width="339" height="1" uuid="7d58fbb1-d9aa-4167-ac2d-9029340efc66"/>
+			</line>
+			<staticText>
+				<reportElement x="200" y="44" width="190" height="30" uuid="19e0a1bd-536a-4386-b4cf-7af0aff4f5a6"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Integração de Terceiros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="19" width="50" height="22" uuid="3c999fc1-731b-4a9c-bf03-9815f88e52b2"/>
+				<text><![CDATA[RQ 19.02]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="29" width="50" height="22" uuid="feb4a0f0-87da-483a-babb-4bea96efada2"/>
+				<text><![CDATA[REV. 00]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="29" width="90" height="40" uuid="2e63fca1-7915-4451-9146-434ca6bf5379"/>
+				<imageExpression><![CDATA["C:/DevSoftware/Reports/camera.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="357" splitType="Stretch">
+			<staticText>
+				<reportElement x="25" y="50" width="510" height="280" uuid="229c9f02-3d4c-4954-8772-b5835cc3846b"/>
+				<textElement>
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[DOS VEICULOS
+
+ - Identificação das empresas tercerizadas nas dependencia da Camera serão pelo acesso rápido.
+ - Os veículos terão de fazer o chek-in no portão de acesso , e os calaboradores tercerizados , após o registro passarão pela catraca dos afuncionarios.
+ - Não será permitido o veículo da empresa permanecer dentro das dependencias da empresa.
+ - Somente para carga e descarga de ferramentas e/ou outros, o veículo poderá acessar os locais de trabalho com horários pré-determinados e autorizados.
+ - Na entrada e saída da empresa tercerizada , serão apresentados as ferramentas dos trabalhadores contratados e previamente conferido com a lista já homologada.
+
+DOS MATERIAS
+
+ - Será realizado uma conferência de materiais ao entrar e ao sair da empresa.
+ - Guardar utensílios pessoais mochilas e similares onde terão um local apropiado para terceiros
+ - Será proibido transitar na empresa com caixas e mochilas que não sejam ferramentas de trabalho.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="110" y="10" width="340" height="20" uuid="f61c3f04-879d-4ddb-9b3b-0f97b22d57ed"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="207" y="11" width="172" height="19" uuid="f27c0c85-65a4-415b-b333-86de3fc18645"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[ACESSO DE TERCEIROS ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="58" height="30" uuid="f68d97b7-934b-4837-b2b4-ef4c85412300">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4eb7a79b-3098-4164-b0e4-7370bf16bcab"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="0" width="41" height="30" uuid="13ff9c85-d392-4b1e-bb95-fbeeb161916d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ffde8b4-ac9b-4569-a7d3-f96f16b53f0d"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="30" uuid="177c2990-f59d-400c-881d-e430762bcff7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4eb7a79b-3098-4164-b0e4-7370bf16bcab"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="100" height="30" uuid="8cab3b1d-75ee-4ca0-8e0b-88c9155bd02f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ffde8b4-ac9b-4569-a7d3-f96f16b53f0d"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="30" uuid="dbc865b6-2c55-4e02-92f2-9eb97079358a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="91" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="48" width="100" height="30" uuid="cfb5fabe-a468-4ff8-9d0f-91bbc7e88cd5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4eb7a79b-3098-4164-b0e4-7370bf16bcab"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="22" y="47" width="168" height="1" uuid="daa0b46b-8280-42d8-87cd-c2e5ca3fbf6b"/>
+			</line>
+			<line>
+				<reportElement x="270" y="48" width="168" height="1" uuid="ee173c38-6d7b-4040-a830-61d2565b0c2e"/>
+			</line>
+			<staticText>
+				<reportElement x="300" y="48" width="100" height="30" uuid="d7e1cfaa-952c-4440-88f6-86f4e45a800d"/>
+				<text><![CDATA[Camera Agroindustrial]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
