@@ -1,0 +1,163 @@
+create database dbinfox;
+
+use dbinfox;
+
+create table usuarios (
+iduser int primary key,
+usuario varchar(50) not null, 
+login varchar(15) not null unique,
+senha varchar(15) not null
+);
+
+describe usuarios;
+
+insert into usuarios(iduser, usuario, login, senha)
+values (1, 'Leonardo', 'lev', '1234');
+
+insert into usuarios(iduser, usuario, login, senha)
+values (2, 'Administrador', 'adm', '1234');
+
+insert into usuarios(iduser, usuario, login, senha,perfil)
+values (4, 'User', 'user', '1234','user');
+
+select * from usuarios;
+
+create table tbclientes(
+idcli int primary key auto_increment,
+nomecli varchar(50) not null
+);
+
+create table pesagem(
+romaneio int primary key auto_increment,
+data_romaneio timestamp default current_timestamp, 
+placa varchar(50) not null,
+tara int(8),
+bruto int(8),
+liquido int(8), 
+idcli int not null, 
+foreign key(idcli) references tbclientes(idcli)
+
+);
+describe pesagem;
+
+use dbinfox;
+alter table usuarios add column perfil  varchar(20) not null;
+
+update usuarios set perfil='admin' where iduser =2;
+
+create table veiculos(
+idveiculo int primary key auto_increment,
+dataCad timestamp default current_timestamp, 
+placa varchar(6) not null,
+tipoVeiculo varchar(50),
+descricaoVeiculo varchar(200),
+motorista varchar(50) not null,
+idcli int not null, 
+foreign key(idcli) references tbclientes(idcli)
+
+);
+
+drop table tbempresas;
+create table tbempresas (
+	idEmp int primary key auto_increment,
+    dataCad timestamp default current_timestamp, 
+    nomeEmp varchar(100) not null,
+    cnpj int(20) not null,
+    descricaoEmp varchar(200),
+    tipo varchar(20) not null
+);
+
+use dbinfox;
+select idpes, nome, tipo, idemp from pessoas where iud='59AE75C2';
+select * from pessoas;
+
+
+alter table empresas
+add ;
+
+alter TABLE pessoas add column
+idinteg int;
+foreign key(idintegracao) references integracao(idinteg);
+
+alter TABLE pessoas 
+FOREIGN KEY (idinteg) REFERENCES integracao(id);
+
+ALTER TABLE `pessoas` ADD CONSTRAINT `fk_integracao` FOREIGN KEY ( `idinteg` ) REFERENCES `integracao` ( `idinteg` ) ;
+
+drop table integracao;
+create table integracao(
+idinteg int primary key auto_increment,
+datainteg timestamp default current_timestamp, 
+statusInteg boolean not null,
+setor varchar(25),
+idempresa int,
+foreign key(idempresa) references parametrosempresa(id),
+idusuario int,
+foreign key(idusuario) references usuarios(iduser),
+idemp int,
+foreign key(idemp) references empresas(idemp),
+idpes int,
+foreign key(idpes) references pessoas(idpes),
+validade datetime
+
+);
+
+select max(idinteg) from integracao;
+
+
+select 
+INTEG.idinteg,DATE_FORMAT (`datainteg`,'%d/%m/%Y') as datainteg, setor, DATE_FORMAT (`validade`,'%d/%m/%Y') as validade,
+PES.idpes, nome,cpf,tipo,cidade from integracao as INTEG
+inner join pessoas as PES 
+on (PES.idpes = INTEG.idpes and idpes=11);
+
+select 
+INTEG.idinteg,DATE_FORMAT (`datainteg`,'%d/%m/%Y') as datainteg, setor, DATE_FORMAT (`validade`,'%d/%m/%Y') as validade, 
+PES.idpes, nome,cpf,tipo,cidade from pessoas as PES
+parametrosempresainner join integracao as INTEG 
+on (PES.idpes = INTEG.idpes );
+
+select * from pessoas p
+join integracao i
+on p.idpes = i.idpes
+where i.idinteg=11;
+
+select i.idinteg as ID, p.nome as Nome, cpf as CPF, e.nome as Empresa, DATE_FORMAT (`datainteg`,'%d/%m/%Y') as datainteg, DATE_FORMAT (i.validade,'%d/%m/%Y') as validade from pessoas p
+join integracao i
+on p.idpes = i.idpes
+join empresas e
+on e.idemp = i.idemp
+where i.idemp=11;
+
+select p.idpes, p.nome, p.cpf, p.tipo, e.idemp, e.nome, e.cnpj, e.ncontrato, DATE_FORMAT (i.datainteg,'%d/%m/%Y'), DATE_FORMAT (i.validade,'%d/%m/%Y'), i.statusInteg, i.setor from pessoas p
+join integracao i
+on p.idpes = i.idpes
+join empresas e
+on e.idemp = i.idemp
+where i.idemp=11
+order by p.nome;
+
+select  c.id, DATE_FORMAT (c.datageracao,'%d/%m/%Y'), d.destino, d.cliente, c.notacarga, e.fone, c.lacres, v.placa, v.placaCarreta, v.placaCarreta2, v.placaCarreta3, p.cnh, p.cat,  p.nome, e.nome, c.item1, c.item2, c.item3, c.item4, c.item5, c.item6, c.item7, c.item8, c.item9, c.item10, c.obs1, c.obs2, c.obs3, c.obs4, c.obs5, c.obs6, c.obs7, c.obs8, c.obs9, c.obs10, c.carga1, c.carga2, c.carga3, c.nota1, c.nota2, c.nota3, c.regimelimpeza1, c.regimelimpeza2, c.regimelimpeza3 from checklist c
+join destinos d
+on c.iddestino = d.id
+join pessoas p
+on c.idpes = p.idpes
+join empresas e
+on c.idemp= e.idemp
+join veiculos v 
+on c.idvei= v.idvei
+where c.id=8
+
+use dbinfox;
+
+select p.idpes, p.nome, p.cpf, e.nome, e.cnpj, DATE_FORMAT (i.datainteg,'%d/%m/%Y'), DATE_FORMAT (i.validade,'%d/%m/%Y'), i.statusInteg, i.setor from integracao i
+join pessoas p
+on i.idpes = p.idpes
+join empresas e
+on e.idemp = i.idemp
+where i.statusInteg='1'
+order by e.nome;
+
+
+
+use dbinfox;
